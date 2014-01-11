@@ -37,7 +37,8 @@ class Layout
   
     for i in images
       lp i
-    console.log('Root:', root);
+    dim = Math.max(root.w, root.h);
+    root.w = root.h = Math.pow(2, Math.ceil(Math.log(dim) / Math.log(2)));
     return {
       width: root.w
       height: root.h
