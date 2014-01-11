@@ -6,8 +6,8 @@ class Layout
   
     hpadding = options.hpadding || 0
     vpadding = options.vpadding || 0
-    hmargin  = options.hmargin  || 0
-    vmargin  = options.vmargin  || 0
+    hmargin  = options.hmargin  || 1
+    vmargin  = options.vmargin  || 1
   
     for i in images
       i.w = i.width  + ( 2 * hpadding ) + ( 2 * hmargin )
@@ -37,7 +37,7 @@ class Layout
   
     for i in images
       lp i
-  
+    console.log('Root:', root);
     return {
       width: root.w
       height: root.h
